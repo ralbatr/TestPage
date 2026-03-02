@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>山东亿诺思化工有限公司 | 纺织未来，由此开启</title>
+    <title>山东亿诺思化工有限公司 | Shandong Yinuosi Chemical</title>
     <style>
         /* ========================================
            CSS Variables & Reset
@@ -25,16 +25,8 @@
             --accent-color: #34C759;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
             background-color: var(--bg-primary);
             color: var(--text-primary);
@@ -45,39 +37,19 @@
             -moz-osx-font-smoothing: grayscale;
         }
 
-        h1, h2, h3, h4 {
-            font-weight: 600;
-            letter-spacing: -0.03em;
-            line-height: 1.2;
-        }
-
+        h1, h2, h3, h4 { font-weight: 600; letter-spacing: -0.03em; line-height: 1.2; }
         h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); }
         h2 { font-size: clamp(2rem, 4vw, 3rem); }
         h3 { font-size: 1.5rem; }
-
-        p {
-            color: var(--text-secondary);
-            font-size: 1.125rem;
-            line-height: 1.7;
-        }
-
+        p { color: var(--text-secondary); font-size: 1.125rem; line-height: 1.7; }
         ul { list-style: none; }
 
-        .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
         .section { padding: 120px 0; }
 
         /* Navigation */
         .nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
             padding: 20px 0;
             background: rgba(10, 10, 10, 0.8);
             backdrop-filter: blur(20px);
@@ -85,407 +57,114 @@
             border-bottom: 1px solid var(--glass-border);
             transition: var(--transition-smooth);
         }
-
-        .nav-inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 60px;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            text-decoration: none;
-            letter-spacing: -0.02em;
-        }
-
+        .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--text-primary); text-decoration: none; letter-spacing: -0.02em; }
         .logo span { font-weight: 300; color: var(--text-secondary); }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-        }
-
-        .nav-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
+        
+        .nav-right { display: flex; align-items: center; gap: 40px; }
+        .nav-links { display: flex; align-items: center; gap: 40px; }
+        .nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.3s ease; }
         .nav-links a:hover { color: var(--text-primary); }
 
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            padding-top: 100px;
-            overflow: hidden;
-        }
-
-        .hero-ambient {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 800px;
-            height: 800px;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .hero-ambient-2 {
-            position: absolute;
-            top: 20%;
-            left: 20%;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.02) 0%, transparent 70%);
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .hero-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-text { max-width: 600px; }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 8px 16px;
+        /* Language Switcher Button */
+        .lang-switch {
             background: var(--glass-border);
+            border: 1px solid var(--glass-border);
+            color: var(--text-primary);
+            padding: 6px 16px;
             border-radius: 20px;
             font-size: 0.85rem;
-            color: var(--text-secondary);
-            margin-bottom: 32px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            display: flex;
+            align-items: center;
+            gap: 6px;
             backdrop-filter: blur(10px);
         }
-
-        .hero-badge-dot {
-            width: 8px;
-            height: 8px;
-            background: var(--accent-color);
-            border-radius: 50%;
-            animation: pulse 2s ease-in-out infinite;
+        .lang-switch:hover {
+            background: var(--glass-border-hover);
+            transform: scale(1.05);
         }
+        .lang-icon { font-size: 1.1rem; }
 
-        @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.5; transform: scale(1.2); }
-        }
-
-        .hero-text h1 {
-            margin-bottom: 24px;
-            background: linear-gradient(135deg, #ffffff 0%, #a0a0a0 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 16px;
-            margin-top: 32px;
-        }
-
-        .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--text-primary);
-            color: var(--bg-primary);
-            padding: 16px 32px;
-            border-radius: 28px;
-            font-size: 1rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: var(--transition-smooth);
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 20px 40px rgba(255, 255, 255, 0.15);
-        }
-
-        .btn-secondary {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: transparent;
-            color: var(--text-primary);
-            padding: 16px 32px;
-            border-radius: 28px;
-            font-size: 1rem;
-            font-weight: 500;
-            text-decoration: none;
-            border: 1px solid var(--glass-border);
-            transition: var(--transition-smooth);
-            cursor: pointer;
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.05);
-            border-color: var(--glass-border-hover);
-        }
+        /* Hero Section */
+        .hero { min-height: 100vh; display: flex; align-items: center; position: relative; padding-top: 100px; overflow: hidden; }
+        .hero-ambient { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 70%); pointer-events: none; z-index: 0; }
+        .hero-ambient-2 { position: absolute; top: 20%; left: 20%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255, 255, 255, 0.02) 0%, transparent 70%); pointer-events: none; z-index: 0; }
+        .hero-content { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; position: relative; z-index: 1; }
+        .hero-text { max-width: 600px; }
+        
+        .hero-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background: var(--glass-border); border-radius: 20px; font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 32px; backdrop-filter: blur(10px); }
+        .hero-badge-dot { width: 8px; height: 8px; background: var(--accent-color); border-radius: 50%; animation: pulse 2s ease-in-out infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(1.2); } }
+        
+        .hero-text h1 { margin-bottom: 24px; background: linear-gradient(135deg, #ffffff 0%, #a0a0a0 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .hero-buttons { display: flex; gap: 16px; margin-top: 32px; }
+        
+        .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--text-primary); color: var(--bg-primary); padding: 16px 32px; border-radius: 28px; font-size: 1rem; font-weight: 600; text-decoration: none; transition: var(--transition-smooth); border: none; cursor: pointer; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 20px 40px rgba(255, 255, 255, 0.15); }
+        .btn-secondary { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: var(--text-primary); padding: 16px 32px; border-radius: 28px; font-size: 1rem; font-weight: 500; text-decoration: none; border: 1px solid var(--glass-border); transition: var(--transition-smooth); cursor: pointer; }
+        .btn-secondary:hover { background: rgba(255, 255, 255, 0.05); border-color: var(--glass-border-hover); }
 
         /* 3D Floating Fabric Swatch */
-        .fabric-stage {
-            perspective: 1200px;
-            height: 500px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .fabric-swatch {
-            width: 380px;
-            height: 238px;
-            border-radius: 24px;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
-            backdrop-filter: blur(30px);
-            -webkit-backdrop-filter: blur(30px);
-            border: 1px solid var(--glass-border);
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
-            position: relative;
-            transform-style: preserve-3d;
-            animation: float 8s ease-in-out infinite;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding: 32px;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        .fabric-swatch::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            border-radius: 24px;
-            background: linear-gradient(120deg, transparent 25%, rgba(255, 255, 255, 0.15) 45%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 55%, transparent 75%);
-            z-index: 10;
-            pointer-events: none;
-            mix-blend-mode: overlay;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: rotateY(-12deg) rotateX(6deg) translateY(0); }
-            50% { transform: rotateY(8deg) rotateX(-4deg) translateY(-25px); }
-        }
-
-        .fabric-name {
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 12px;
-        }
-
-        .fabric-description {
-            font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.8);
-            line-height: 1.5;
-            margin-bottom: 24px;
-        }
-
+        .fabric-stage { perspective: 1200px; height: 500px; display: flex; align-items: center; justify-content: center; }
+        .fabric-swatch { width: 380px; height: 238px; border-radius: 24px; background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px); border: 1px solid var(--glass-border); border-top: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.05) inset; position: relative; transform-style: preserve-3d; animation: float 8s ease-in-out infinite; display: flex; flex-direction: column; justify-content: space-between; padding: 32px; cursor: pointer; transition: transform 0.3s ease; }
+        .fabric-swatch::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; border-radius: 24px; background: linear-gradient(120deg, transparent 25%, rgba(255, 255, 255, 0.15) 45%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 55%, transparent 75%); z-index: 10; pointer-events: none; mix-blend-mode: overlay; }
+        @keyframes float { 0%, 100% { transform: rotateY(-12deg) rotateX(6deg) translateY(0); } 50% { transform: rotateY(8deg) rotateX(-4deg) translateY(-25px); } }
+        .fabric-name { font-size: 1.75rem; font-weight: 700; color: rgba(255, 255, 255, 0.9); margin-bottom: 12px; }
+        .fabric-description { font-size: 1.1rem; color: rgba(255, 255, 255, 0.8); line-height: 1.5; margin-bottom: 24px; }
         .fabric-colors { display: flex; gap: 10px; margin-top: 16px; }
-        .fabric-color {
-            width: 30px; height: 30px; border-radius: 50%;
-            border: 1px solid rgba(0, 0, 0, 0.2);
-        }
+        .fabric-color { width: 30px; height: 30px; border-radius: 50%; border: 1px solid rgba(0, 0, 0, 0.2); }
         .fabric-color:nth-child(1) { background: #e63946; }
         .fabric-color:nth-child(2) { background: #f1c40f; }
         .fabric-color:nth-child(3) { background: #2a9d8f; }
         .fabric-color:nth-child(4) { background: #264653; }
 
         /* Stats */
-        .stats {
-            padding: 80px 0;
-            border-top: 1px solid var(--glass-border);
-            border-bottom: 1px solid var(--glass-border);
-            background: var(--bg-secondary);
-        }
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 40px;
-        }
+        .stats { padding: 80px 0; border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border); background: var(--bg-secondary); }
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; }
         .stat-item { text-align: center; padding: 20px; }
-        .stat-value {
-            font-size: 3.5rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #ffffff 0%, #666666 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 8px;
-        }
-        .stat-label {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: var(--text-secondary);
-            font-weight: 500;
-        }
+        .stat-value { font-size: 3.5rem; font-weight: 700; background: linear-gradient(135deg, #ffffff 0%, #666666 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px; }
+        .stat-label { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-secondary); font-weight: 500; }
 
         /* Features */
         .features { padding: 140px 0; }
         .features-header { text-align: center; max-width: 700px; margin: 0 auto 80px; }
         .features-header h2 { margin-bottom: 20px; color: var(--text-primary); }
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
-        }
-        .feature-card {
-            background: var(--glass-border);
-            border: 1px solid var(--glass-border);
-            border-radius: 28px;
-            padding: 48px 40px;
-            transition: var(--transition-smooth);
-        }
-        .feature-card:hover {
-            background: rgba(255, 255, 255, 0.06);
-            transform: translateY(-8px);
-            border-color: var(--glass-border-hover);
-        }
-        .feature-icon {
-            width: 64px; height: 64px;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03));
-            border-radius: 20px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 1.75rem; margin-bottom: 28px;
-            border: 1px solid var(--glass-border);
-        }
+        .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+        .feature-card { background: var(--glass-border); border: 1px solid var(--glass-border); border-radius: 28px; padding: 48px 40px; transition: var(--transition-smooth); }
+        .feature-card:hover { background: rgba(255, 255, 255, 0.06); transform: translateY(-8px); border-color: var(--glass-border-hover); }
+        .feature-icon { width: 64px; height: 64px; background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03)); border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; margin-bottom: 28px; border: 1px solid var(--glass-border); }
         .feature-card h3 { margin-bottom: 16px; color: var(--text-primary); }
 
         /* Company Info & Contact */
-        .company-section {
-            padding: 120px 0;
-            background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
-            border-top: 1px solid var(--glass-border);
-        }
-        .company-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 60px;
-            align-items: start;
-        }
+        .company-section { padding: 120px 0; background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%); border-top: 1px solid var(--glass-border); }
+        .company-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: start; }
         .company-details h2 { margin-bottom: 16px; color: var(--text-primary); }
-        .company-tag {
-            display: inline-block;
-            background: rgba(52, 199, 89, 0.15);
-            color: var(--accent-color);
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 32px;
-            border: 1px solid rgba(52, 199, 89, 0.3);
-        }
+        .company-tag { display: inline-block; background: rgba(52, 199, 89, 0.15); color: var(--accent-color); padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 32px; border: 1px solid rgba(52, 199, 89, 0.3); }
         .info-group { margin-bottom: 40px; }
-        .info-group h3 {
-            font-size: 1.2rem;
-            color: var(--text-primary);
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .info-group h3::before {
-            content: '';
-            display: block;
-            width: 4px; height: 20px;
-            background: var(--accent-color);
-            border-radius: 2px;
-        }
-        .info-list li {
-            display: flex;
-            margin-bottom: 16px;
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-        }
-        .info-list li strong {
-            color: var(--text-primary);
-            min-width: 100px;
-            flex-shrink: 0;
-        }
-        .map-wrapper {
-            background: var(--bg-card);
-            border: 1px solid var(--glass-border);
-            border-radius: 28px;
-            padding: 24px;
-            position: sticky;
-            top: 100px;
-        }
-        .map-container {
-            width: 100%;
-            height: 350px;
-            border-radius: 16px;
-            overflow: hidden;
-            background: #1a1a1a;
-            margin-bottom: 24px;
-        }
-        .map-container iframe {
-            width: 100%; height: 100%; border: none;
-            filter: grayscale(100%) invert(92%) contrast(83%);
-        }
+        .info-group h3 { font-size: 1.2rem; color: var(--text-primary); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+        .info-group h3::before { content: ''; display: block; width: 4px; height: 20px; background: var(--accent-color); border-radius: 2px; }
+        .info-list li { display: flex; margin-bottom: 16px; color: var(--text-secondary); font-size: 0.95rem; }
+        .info-list li strong { color: var(--text-primary); min-width: 100px; flex-shrink: 0; }
+        
+        .map-wrapper { background: var(--bg-card); border: 1px solid var(--glass-border); border-radius: 28px; padding: 24px; position: sticky; top: 100px; }
+        .map-container { width: 100%; height: 350px; border-radius: 16px; overflow: hidden; background: #1a1a1a; margin-bottom: 24px; }
+        .map-container iframe { width: 100%; height: 100%; border: none; filter: grayscale(100%) invert(92%) contrast(83%); }
+        
         .contact-actions { display: flex; flex-direction: column; gap: 16px; }
-        .contact-btn {
-            display: flex; align-items: center; justify-content: center;
-            gap: 10px; padding: 14px; border-radius: 12px;
-            text-decoration: none; font-weight: 600;
-            transition: var(--transition-smooth);
-        }
-        .contact-btn.primary {
-            background: var(--text-primary); color: var(--bg-primary);
-        }
-        .contact-btn.primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(255,255,255,0.1);
-        }
-        .contact-btn.secondary {
-            background: rgba(255,255,255,0.05); color: var(--text-primary);
-            border: 1px solid var(--glass-border);
-        }
+        .contact-btn { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 14px; border-radius: 12px; text-decoration: none; font-weight: 600; transition: var(--transition-smooth); }
+        .contact-btn.primary { background: var(--text-primary); color: var(--bg-primary); }
+        .contact-btn.primary:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(255,255,255,0.1); }
+        .contact-btn.secondary { background: rgba(255,255,255,0.05); color: var(--text-primary); border: 1px solid var(--glass-border); }
         .contact-btn.secondary:hover { background: rgba(255,255,255,0.1); }
 
         /* Footer */
-        .footer {
-            padding: 60px 0;
-            border-top: 1px solid var(--glass-border);
-            background: var(--bg-primary);
-        }
-        .footer-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
+        .footer { padding: 60px 0; border-top: 1px solid var(--glass-border); background: var(--bg-primary); }
+        .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
         .footer-links { display: flex; gap: 32px; }
-        .footer-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s ease;
-        }
+        .footer-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; transition: color 0.3s ease; }
         .footer-links a:hover { color: var(--text-primary); }
         .footer-copyright { color: var(--text-muted); font-size: 0.85rem; }
 
@@ -497,9 +176,10 @@
             .info-list li { flex-direction: column; gap: 4px; }
             .map-wrapper { position: static; }
             .stats-grid, .features-grid { grid-template-columns: repeat(2, 1fr); }
+            .nav-right { gap: 20px; }
+            .nav-links { display: none; } /* Simplified mobile nav for this demo */
         }
         @media (max-width: 768px) {
-            .nav-links { display: none; }
             .hero { padding-top: 120px; padding-bottom: 60px; }
             .fabric-stage { height: 300px; }
             .fabric-swatch { width: 280px; height: 176px; padding: 20px; }
@@ -507,6 +187,9 @@
             .features-grid, .stats-grid { grid-template-columns: 1fr; }
             .footer-inner { flex-direction: column; text-align: center; }
             .footer-links { justify-content: center; }
+            .nav-right { gap: 10px; }
+            .lang-switch span { display: none; } /* Show only icon on very small screens if needed */
+            .lang-switch span { display: inline; }
         }
     </style>
 </head>
@@ -515,11 +198,17 @@
     <!-- Navigation -->
     <nav class="nav">
         <div class="container nav-inner">
-            <a href="#" class="logo">亿诺思化工<span>.</span></a>
-            <div class="nav-links">
-                <a href="#features">产品特性</a>
-                <a href="#company">关于我们</a>
-                <a href="#contact">联系我们</a>
+            <a href="#" class="logo">亿诺思<span>.</span></a>
+            <div class="nav-right">
+                <div class="nav-links">
+                    <a href="#features" data-i18n="nav_features">产品特性</a>
+                    <a href="#company" data-i18n="nav_about">关于我们</a>
+                    <a href="#contact" data-i18n="nav_contact">联系我们</a>
+                </div>
+                <button class="lang-switch" id="langToggle" aria-label="Switch Language">
+                    <span class="lang-icon">🌐</span>
+                    <span id="langText">EN</span>
+                </button>
             </div>
         </div>
     </nav>
@@ -532,22 +221,22 @@
             <div class="hero-text">
                 <div class="hero-badge">
                     <span class="hero-badge-dot"></span>
-                    <span>国家高新技术企业</span>
+                    <span data-i18n="hero_badge">国家高新技术企业</span>
                 </div>
-                <h1>纺织未来，<br>由此开启</h1>
-                <p>山东亿诺思化工有限公司，专注高品质海藻酸钠及印花糊料研发，产品远销全球。</p>
+                <h1 data-i18n="hero_title">纺织未来，<br>由此开启</h1>
+                <p data-i18n="hero_desc">山东亿诺思化工有限公司，专注高品质海藻酸钠及印花糊料研发，产品远销全球。</p>
                 <div class="hero-buttons">
                     <a href="#company" class="btn-primary">
-                        了解企业
+                        <span data-i18n="btn_learn">了解企业</span>
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </a>
-                    <a href="#contact" class="btn-secondary">联系合作</a>
+                    <a href="#contact" class="btn-secondary" data-i18n="btn_contact">联系合作</a>
                 </div>
             </div>
             <div class="fabric-stage">
                 <div class="fabric-swatch" id="fabricSwatch">
-                    <div class="fabric-name">海藻酸钠系列</div>
-                    <div class="fabric-description">高粘度、高透明度，适用于活性染料印花，环保可降解。</div>
+                    <div class="fabric-name" data-i18n="product_name">海藻酸钠系列</div>
+                    <div class="fabric-description" data-i18n="product_desc">高粘度、高透明度，适用于活性染料印花，环保可降解。</div>
                     <div class="fabric-colors">
                         <div class="fabric-color"></div>
                         <div class="fabric-color"></div>
@@ -563,10 +252,10 @@
     <section class="stats">
         <div class="container">
             <div class="stats-grid">
-                <div class="stat-item"><div class="stat-value">4项</div><div class="stat-label">核心专利</div></div>
-                <div class="stat-item"><div class="stat-value">7项</div><div class="stat-label">行政许可</div></div>
-                <div class="stat-item"><div class="stat-value">300万</div><div class="stat-label">注册资本</div></div>
-                <div class="stat-item"><div class="stat-value">全球</div><div class="stat-label">出口印尼/埃及</div></div>
+                <div class="stat-item"><div class="stat-value">4</div><div class="stat-label" data-i18n="stat_patents">核心专利</div></div>
+                <div class="stat-item"><div class="stat-value">7</div><div class="stat-label" data-i18n="stat_licenses">行政许可</div></div>
+                <div class="stat-item"><div class="stat-value">3M</div><div class="stat-label" data-i18n="stat_capital">注册资本 (CNY)</div></div>
+                <div class="stat-item"><div class="stat-value" data-i18n="stat_global_val">Global</div><div class="stat-label" data-i18n="stat_export">出口印尼/埃及</div></div>
             </div>
         </div>
     </section>
@@ -575,39 +264,39 @@
     <section class="features" id="features">
         <div class="container">
             <div class="features-header">
-                <h2>核心技术优势</h2>
-                <p>依托高新技术企业认证，我们提供行业领先的化工解决方案</p>
+                <h2 data-i18n="features_title">核心技术优势</h2>
+                <p data-i18n="features_desc">依托高新技术企业认证，我们提供行业领先的化工解决方案</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">🧪</div>
-                    <h3>高新认证技术</h3>
-                    <p>2024年通过国家高新技术企业认定，拥有自主研发的核心配方与生产工艺。</p>
+                    <h3 data-i18n="feat_1_title">高新认证技术</h3>
+                    <p data-i18n="feat_1_desc">2024年通过国家高新技术企业认定，拥有自主研发的核心配方与生产工艺。</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🌍</div>
-                    <h3>全球供应链</h3>
-                    <p>产品远销印尼、埃及、孟加拉等国家，具备完善的进出口代理与检验鉴定能力。</p>
+                    <h3 data-i18n="feat_2_title">全球供应链</h3>
+                    <p data-i18n="feat_2_desc">产品远销印尼、埃及、孟加拉等国家，具备完善的进出口代理与检验鉴定能力。</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🛡️</div>
-                    <h3>合规经营</h3>
-                    <p>拥有多项行政许可，严格遵循化工产品销售规范，确保货物与技术进出口安全。</p>
+                    <h3 data-i18n="feat_3_title">合规经营</h3>
+                    <p data-i18n="feat_3_desc">拥有多项行政许可，严格遵循化工产品销售规范，确保货物与技术进出口安全。</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🌿</div>
-                    <h3>环保印花糊料</h3>
-                    <p>主营海藻酸钠等环保型印花糊料，无化学污染，符合国际纺织品生态标准。</p>
+                    <h3 data-i18n="feat_4_title">环保印花糊料</h3>
+                    <p data-i18n="feat_4_desc">主营海藻酸钠等环保型印花糊料，无化学污染，符合国际纺织品生态标准。</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">⚙️</div>
-                    <h3>定制化服务</h3>
-                    <p>根据客户需求调整新产品种类，提供从原料到成品的全方位技术支持。</p>
+                    <h3 data-i18n="feat_5_title">定制化服务</h3>
+                    <p data-i18n="feat_5_desc">根据客户需求调整新产品种类，提供从原料到成品的全方位技术支持。</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🤝</div>
-                    <h3>专业团队</h3>
-                    <p>由资深经理人唐桂卿带领的专业团队，提供高效、精准的商务对接服务。</p>
+                    <h3 data-i18n="feat_6_title">专业团队</h3>
+                    <p data-i18n="feat_6_desc">由资深经理人唐桂卿带领的专业团队，提供高效、精准的商务对接服务。</p>
                 </div>
             </div>
         </div>
@@ -618,48 +307,41 @@
         <div class="container">
             <div class="company-grid">
                 <div class="company-details" id="company">
-                    <span class="company-tag">高新技术企业 GR202437007524</span>
-                    <h2>山东亿诺思化工有限公司</h2>
-                    <p style="margin-bottom: 40px;">
-                        位于山东半岛尾翼、水上运动之都——日照。自2020年成立以来，我们专注于化学原料和化学制品的制造与销售，致力于成为全球信赖的化工合作伙伴。
-                    </p>
+                    <span class="company-tag" data-i18n="badge_hightech">高新技术企业 GR202437007524</span>
+                    <h2 data-i18n="company_name_full">山东亿诺思化工有限公司</h2>
+                    <p style="margin-bottom: 40px;" data-i18n="company_intro">位于山东半岛尾翼、水上运动之都——日照。自2020年成立以来，我们专注于化学原料和化学制品的制造与销售，致力于成为全球信赖的化工合作伙伴。</p>
+                    
                     <div class="info-group">
-                        <h3>基本信息</h3>
+                        <h3 data-i18n="info_basic_title">基本信息</h3>
                         <ul class="info-list">
-                            <li><strong>成立日期：</strong>2020年09月22日</li>
-                            <li><strong>法定代表人：</strong>安郁保</li>
-                            <li><strong>注册资本：</strong>300万元人民币</li>
-                            <li><strong>企业类型：</strong>有限责任公司(自然人独资)</li>
-                            <li><strong>经营状态：</strong>在业</li>
+                            <li><strong data-i18n="label_established">成立日期：</strong><span data-i18n="val_established">2020年09月22日</span></li>
+                            <li><strong data-i18n="label_legal">法定代表人：</strong><span data-i18n="val_legal">安郁保</span></li>
+                            <li><strong data-i18n="label_capital">注册资本：</strong><span data-i18n="val_capital">300万元人民币</span></li>
+                            <li><strong data-i18n="label_type">企业类型：</strong><span data-i18n="val_type">有限责任公司(自然人独资)</span></li>
+                            <li><strong data-i18n="label_status">经营状态：</strong><span data-i18n="val_status">在业</span></li>
                         </ul>
                     </div>
                     <div class="info-group">
-                        <h3>经营范围</h3>
-                        <p style="font-size: 0.95rem; line-height: 1.6;">
-                            化工产品销售（不含许可类化工产品）；货物进出口；技术进出口；进出口代理；进出口商品检验鉴定。
-                        </p>
+                        <h3 data-i18n="info_scope_title">经营范围</h3>
+                        <p style="font-size: 0.95rem; line-height: 1.6;" data-i18n="val_scope">化工产品销售（不含许可类化工产品）；货物进出口；技术进出口；进出口代理；进出口商品检验鉴定。</p>
                     </div>
                 </div>
+                
                 <div class="map-wrapper">
                     <div class="map-container">
-                        <iframe 
-                            src="https://j.map.baidu.com/02/7G?qt=point&ie=utf-8&from=webmap&newmap=1&location=35.425,119.535&rl=1000&width=100%&height=100%" 
-                            allowfullscreen 
-                            frameborder="0"
-                            title="山东亿诺思化工有限公司位置">
-                        </iframe>
+                        <iframe src="https://j.map.baidu.com/02/7G?qt=point&ie=utf-8&from=webmap&newmap=1&location=35.425,119.535&rl=1000&width=100%&height=100%" allowfullscreen frameborder="0" title="Location"></iframe>
                     </div>
                     <div class="contact-actions">
-                        <div style="margin-bottom: 10px; color: var(--text-secondary); font-size: 0.9rem;">
+                        <div style="margin-bottom: 10px; color: var(--text-secondary); font-size: 0.9rem;" data-i18n="address_text">
                             📍 山东省日照市东港区秦楼街道曲阜路<br>海曲新村东沿街2号
                         </div>
                         <a href="tel:0633-1234567" class="contact-btn primary">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-                            电话咨询
+                            <span data-i18n="btn_call">电话咨询</span>
                         </a>
                         <a href="mailto:contact@yinuosichem.com" class="contact-btn secondary">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                            发送邮件
+                            <span data-i18n="btn_email">发送邮件</span>
                         </a>
                     </div>
                 </div>
@@ -670,36 +352,204 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer-inner">
-            <a href="#" class="logo">亿诺思化工<span>.</span></a>
+            <a href="#" class="logo">亿诺思<span>.</span></a>
             <div class="footer-links">
-                <a href="#company">关于我们</a>
-                <a href="#features">产品中心</a>
-                <a href="#">资质证书</a>
-                <a href="#contact">联系我们</a>
+                <a href="#company" data-i18n="nav_about">关于我们</a>
+                <a href="#features" data-i18n="footer_products">产品中心</a>
+                <a href="#" data-i18n="footer_certs">资质证书</a>
+                <a href="#contact" data-i18n="nav_contact">联系我们</a>
             </div>
             <div class="footer-copyright">
-                © 2025 山东亿诺思化工有限公司 保留所有权利。
+                © 2025 <span data-i18n="company_name_short">山东亿诺思化工有限公司</span>. <span data-i18n="footer_rights">保留所有权利。</span>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript (Fixed: No duplicate declarations) -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        // ========================================
+        // Language Data Dictionary
+        // ========================================
+        const translations = {
+            zh: {
+                nav_features: "产品特性",
+                nav_about: "关于我们",
+                nav_contact: "联系我们",
+                hero_badge: "国家高新技术企业",
+                hero_title: "纺织未来，<br>由此开启",
+                hero_desc: "山东亿诺思化工有限公司，专注高品质海藻酸钠及印花糊料研发，产品远销全球。",
+                btn_learn: "了解企业",
+                btn_contact: "联系合作",
+                product_name: "海藻酸钠系列",
+                product_desc: "高粘度、高透明度，适用于活性染料印花，环保可降解。",
+                stat_patents: "核心专利",
+                stat_licenses: "行政许可",
+                stat_capital: "注册资本 (CNY)",
+                stat_global_val: "全球",
+                stat_export: "出口印尼/埃及",
+                features_title: "核心技术优势",
+                features_desc: "依托高新技术企业认证，我们提供行业领先的化工解决方案",
+                feat_1_title: "高新认证技术",
+                feat_1_desc: "2024年通过国家高新技术企业认定，拥有自主研发的核心配方与生产工艺。",
+                feat_2_title: "全球供应链",
+                feat_2_desc: "产品远销印尼、埃及、孟加拉等国家，具备完善的进出口代理与检验鉴定能力。",
+                feat_3_title: "合规经营",
+                feat_3_desc: "拥有多项行政许可，严格遵循化工产品销售规范，确保货物与技术进出口安全。",
+                feat_4_title: "环保印花糊料",
+                feat_4_desc: "主营海藻酸钠等环保型印花糊料，无化学污染，符合国际纺织品生态标准。",
+                feat_5_title: "定制化服务",
+                feat_5_desc: "根据客户需求调整新产品种类，提供从原料到成品的全方位技术支持。",
+                feat_6_title: "专业团队",
+                feat_6_desc: "由资深经理人唐桂卿带领的专业团队，提供高效、精准的商务对接服务。",
+                badge_hightech: "高新技术企业 GR202437007524",
+                company_name_full: "山东亿诺思化工有限公司",
+                company_name_short: "山东亿诺思化工有限公司",
+                company_intro: "位于山东半岛尾翼、水上运动之都——日照。自2020年成立以来，我们专注于化学原料和化学制品的制造与销售，致力于成为全球信赖的化工合作伙伴。",
+                info_basic_title: "基本信息",
+                label_established: "成立日期：",
+                val_established: "2020年09月22日",
+                label_legal: "法定代表人：",
+                val_legal: "安郁保",
+                label_capital: "注册资本：",
+                val_capital: "300万元人民币",
+                label_type: "企业类型：",
+                val_type: "有限责任公司(自然人独资)",
+                label_status: "经营状态：",
+                val_status: "在业",
+                info_scope_title: "经营范围",
+                val_scope: "化工产品销售（不含许可类化工产品）；货物进出口；技术进出口；进出口代理；进出口商品检验鉴定。",
+                address_text: "📍 山东省日照市东港区秦楼街道曲阜路<br>海曲新村东沿街2号",
+                btn_call: "电话咨询",
+                btn_email: "发送邮件",
+                footer_products: "产品中心",
+                footer_certs: "资质证书",
+                footer_rights: "保留所有权利。"
+            },
+            en: {
+                nav_features: "Features",
+                nav_about: "About Us",
+                nav_contact: "Contact",
+                hero_badge: "National High-Tech Enterprise",
+                hero_title: "Textile Future,<br>Starts Here",
+                hero_desc: "Shandong Yinuosi Chemical Co., Ltd. focuses on R&D of high-quality Sodium Alginate and printing pastes, exporting globally.",
+                btn_learn: "Learn More",
+                btn_contact: "Contact Us",
+                product_name: "Sodium Alginate Series",
+                product_desc: "High viscosity and transparency, suitable for reactive dye printing, eco-friendly and biodegradable.",
+                stat_patents: "Core Patents",
+                stat_licenses: "Licenses",
+                stat_capital: "Capital (CNY)",
+                stat_global_val: "Global",
+                stat_export: "Export to ID/EG",
+                features_title: "Core Advantages",
+                features_desc: "Backed by High-Tech certification, we provide industry-leading chemical solutions.",
+                feat_1_title: "Certified Technology",
+                feat_1_desc: "Recognized as a National High-Tech Enterprise in 2024 with proprietary formulas and processes.",
+                feat_2_title: "Global Supply Chain",
+                feat_2_desc: "Exporting to Indonesia, Egypt, Bangladesh, etc., with full import/export agency capabilities.",
+                feat_3_title: "Compliance",
+                feat_3_desc: "Multiple administrative licenses ensuring safe and compliant global trade of chemicals.",
+                feat_4_title: "Eco-Friendly Pastes",
+                feat_4_desc: "Specializing in Sodium Alginate pastes, pollution-free and meeting international textile standards.",
+                feat_5_title: "Customization",
+                feat_5_desc: "Tailoring new product types to client needs with full technical support from raw material to finish.",
+                feat_6_title: "Professional Team",
+                feat_6_desc: "Led by senior manager Tang Guiqing, providing efficient and precise business services.",
+                badge_hightech: "High-Tech Enterprise GR202437007524",
+                company_name_full: "Shandong Yinuosi Chemical Co., Ltd.",
+                company_name_short: "Yinuosi Chemical",
+                company_intro: "Located in Rizhao, the 'Capital of Water Sports' at the tip of the Shandong Peninsula. Since 2020, we have focused on manufacturing and selling chemical raw materials, striving to be a trusted global partner.",
+                info_basic_title: "Basic Information",
+                label_established: "Established:",
+                val_established: "Sep 22, 2020",
+                label_legal: "Legal Rep:",
+                val_legal: "An Yubao",
+                label_capital: "Capital:",
+                val_capital: "3 Million CNY",
+                label_type: "Type:",
+                val_type: "LLC (Natural Person Sole)",
+                label_status: "Status:",
+                val_status: "Active",
+                info_scope_title: "Business Scope",
+                val_scope: "Sales of chemical products (non-licensed); Import/Export of goods & technology; Agency; Inspection & appraisal.",
+                address_text: "📍 No. 2 East Street, Haiqu New Village,<br>Qufu Road, Qinlou St, Donggang, Rizhao, Shandong",
+                btn_call: "Call Us",
+                btn_email: "Email Us",
+                footer_products: "Products",
+                footer_certs: "Certificates",
+                footer_rights: "All Rights Reserved."
+            }
+        };
+
+        // ========================================
+        // Logic: Detect Language & Switch
+        // ========================================
+        let currentLang = 'zh'; // Default fallback
+
+        function detectLanguage() {
+            // 1. Check localStorage first (user preference)
+            const savedLang = localStorage.getItem('yinuosilang');
+            if (savedLang) return savedLang;
+
+            // 2. Check Browser Language (Navigator)
+            // This usually correlates with IP location for most users
+            const browserLang = navigator.language || navigator.userLanguage; 
+            const isChinese = browserLang.toLowerCase().startsWith('zh') || 
+                              browserLang.toLowerCase().includes('cn') || 
+                              browserLang.toLowerCase().includes('hans');
+
+            return isChinese ? 'zh' : 'en';
+        }
+
+        function updateContent(lang) {
+            currentLang = lang;
+            
+            // Update Text Content
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    // Handle HTML inside strings (like <br>)
+                    element.innerHTML = translations[lang][key];
+                }
+            });
+
+            // Update Button Text (CN/EN)
+            const langBtnText = document.getElementById('langText');
+            langBtnText.textContent = lang === 'zh' ? 'EN' : '中文';
+
+            // Update HTML Lang Attribute
+            document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+
+            // Save Preference
+            localStorage.setItem('yinuosilang', lang);
+        }
+
+        // ========================================
+        // Initialization & Event Listeners
+        // ========================================
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Detect and Set Initial Language
+            const initialLang = detectLanguage();
+            updateContent(initialLang);
+
+            // 2. Bind Toggle Button
+            const langToggle = document.getElementById('langToggle');
+            langToggle.addEventListener('click', () => {
+                const newLang = currentLang === 'zh' ? 'en' : 'zh';
+                updateContent(newLang);
+            });
+
+            // 3. Re-bind 3D Effect (Safety check)
             const fabricStage = document.querySelector('.fabric-stage');
             const fabricSwatch = document.getElementById('fabricSwatch');
             
             if (fabricStage && fabricSwatch) {
                 let isHovering = false;
-
                 fabricStage.addEventListener('mouseenter', () => { isHovering = true; });
-                
                 fabricStage.addEventListener('mouseleave', () => {
                     isHovering = false;
                     fabricSwatch.style.transition = 'transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1)';
                     fabricSwatch.style.transform = '';
                 });
-
                 fabricStage.addEventListener('mousemove', (e) => {
                     if (!isHovering) return;
                     const rect = fabricStage.getBoundingClientRect();
@@ -709,27 +559,24 @@
                     const mouseY = e.clientY - centerY;
                     const rotateY = (mouseX / rect.width) * 15;
                     const rotateX = -(mouseY / rect.height) * 15;
-                    
                     fabricSwatch.style.transition = 'none';
                     fabricSwatch.style.transform = `perspective(1200px) rotateY(${rotateY}deg) rotateX(${rotateX}deg) scale3d(1.02, 1.02, 1.02)`;
                 });
             }
 
-            // Smooth Scroll
+            // 4. Smooth Scroll
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     const href = this.getAttribute('href');
                     if (href !== '#') {
                         e.preventDefault();
                         const target = document.querySelector(href);
-                        if (target) {
-                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                        }
+                        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                     }
                 });
             });
 
-            // Nav Background on Scroll
+            // 5. Nav Scroll Effect
             window.addEventListener('scroll', () => {
                 const nav = document.querySelector('.nav');
                 if (nav) {
